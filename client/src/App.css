@@ -1,0 +1,383 @@
+html {
+  --primary: #febd69;
+  --secondery: #ff6138;
+  --black: #0f1111;
+  --dark: #131921;
+  --light: #f9f9f9;
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #a02020;
+  --info: #007bff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+  background: var(--light);
+  line-height: 1.7;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.color-success {
+  color: var(--success);
+}
+
+.color-danger {
+  color: var(--danger);
+}
+
+.color-warning {
+  color: var(--warning);
+}
+
+.alert {
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+.alert-info {
+  color: var(--info);
+  background: #e0e0ff;
+}
+
+.alert-error {
+  color: var(--danger);
+  background: #ffe0e0;
+}
+
+.stockStatus {
+  display: flex;
+  margin-top: 15px;
+}
+
+.stockNum {
+  color: var(--black);
+}
+
+.stockStatus > strong {
+  margin-right: 10px;
+}
+
+.lazyLoader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: rgb(255 255 255 / 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Grid System */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.row .col {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding: 8px;
+}
+
+.row .col-md-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.row .col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.row .col-md-8 {
+  flex: 0 0 66.666666%;
+  max-width: 66.666666%;
+}
+
+@media(max-width:767px) {
+  .row .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media(max-width:630px) {
+  .row .col-md-4, .row .col-md-6, .row .col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Header Style */
+.headerWrap {
+  color: #fff;
+  background: var(--dark);
+}
+
+.headerMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.logo a {
+  font-size: 28px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.searchWrap {
+  flex: 1;
+  padding: 0 15px;
+  max-width: 600px;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+}
+
+.searchForm input {
+  padding: 8px 10px;
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 40px;
+  width: 100%;
+  border-right-width: 0;
+  font-size: 16px;
+}
+
+.searchForm button[type=submit] {
+  padding: 5px;
+  background: var(--primary);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left-width: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  font-size: 20px;
+  height: 40px;
+  width: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.searchForm button[type=submit]:hover {
+  background: var(--secondery);
+}
+
+.headerActions {
+  display: flex;
+}
+
+.headerActions a {
+  color: #fff;
+  font-size: 10px;
+  padding: 5px;
+  margin: 0 5px;
+  text-decoration: none;
+  font-weight: 300;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.headerActions a:hover {
+  color: var(--primary);
+}
+
+.headerActions i {
+  font-size: 20px;
+  display: block;
+}
+
+.mainWrap {
+  min-height: 90vh;
+}
+
+/* Product Cart */
+.productGrid {
+  padding: 30px 15px;
+}
+
+.productCard {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.productMeta {
+  padding: 10px;
+}
+
+.productImg {
+  display: block;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.productMeta h4 {
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.productMeta a {
+  text-decoration: none;
+  color: var(--black);
+  transition: all 0.3s;
+}
+
+.productMeta a:hover {
+  color: var(--secondery);
+}
+
+.productMeta h5 {
+  margin-bottom: 5px;
+  color: var(--secondery);
+  opacity: 0.7;
+}
+
+.productMeta .rating {
+  color: var(--primary);
+  font-size: 13px;
+}
+
+.productMeta .numReviews {
+  font-weight: 700;
+  color: var(--dark);
+  font-size: 11px;
+}
+
+/* Single Product Style */
+.productSingle .productImg {
+  max-height: 500px;
+}
+
+.singleProduct .productMeta {
+  padding: 0;
+}
+
+.singleProduct .productMeta h2 {
+  font-size: 28px;
+}
+
+.singleProduct .productMeta h5 {
+  font-size: 26px;
+}
+
+.singleProduct .productMeta .rating {
+  margin-bottom: 10px;
+}
+
+.prodBrand {
+  margin: 0 0 10px;
+}
+
+.productForm {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.productForm label {
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.qtyGroup {
+  margin-right: 15px;
+  display: flex;
+}
+
+.qtyGroup button, .qtyGroup input {
+  padding: 10px 5px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: #fff;
+  font-size: 17px;
+  height: 45px;
+  text-align: center;
+  max-width: 50px;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+.qtyGroup input::-webkit-outer-spin-button,
+.qtyGroup input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.qtyGroup button {
+  padding-left: 7px;
+  padding-right: 7px;
+  font-size: 30px;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.qtyGroup button:hover {
+  background: var(--primary);
+}
+
+.btn-cart {
+  padding: 8px 25px;
+  height: 45px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #fff;
+  background: var(--secondery);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-cart i {
+  font-size: 130%;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+
+
+/* Footer Style */
+.footerWrap {
+  background: var(--dark);
+  text-align: center;
+  padding: 15px 15px;
+  color: #fff;
+  font-size: 14px;
+}
