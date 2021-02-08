@@ -4,7 +4,12 @@ import data from './data.js'
 const app = express();
 
 app.get('/api/products/:id', (req, res) => {
-  res.send('Product Details')
+  const product = data.products.find(prodId => prodId._id === req.params.id);
+  if(product) {
+    res.send(product)
+  } else {
+    res.status(404).send({message: 'Product not found!'})
+  }
 })
 
 app.get('/api/products', (req, res) => {
