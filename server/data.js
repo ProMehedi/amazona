@@ -9,7 +9,7 @@ const data = {
       brand: 'Nike',
       rating: 4.5,
       numReviews: 2,
-      countInStock: 150,
+      countInStock: 0,
       descrption: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae deleniti a quo reprehenderit mollitia, minima vitae. Tenetur, veniam sapiente ipsa quaerat nihil eius nemo placeat non tempore cumque sint, dolorum in soluta alias quo consequatur magni earum nostrum autem! Perferendis quam animi aperiam voluptas possimus, porro incidunt tenetur vitae debitis!'
     },
     {

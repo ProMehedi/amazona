@@ -365,6 +365,11 @@ img {
   cursor: pointer;
 }
 
+.btn-cart.desabled {
+  background: #ddd;
+  cursor: not-allowed;
+}
+
 .btn-cart i {
   font-size: 130%;
   vertical-align: middle;

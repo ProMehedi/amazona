@@ -17,6 +17,10 @@ const ProductScreen = (props) => {
     setQty(e.target.value);
   }
 
+  const addToCartHandler = () => {
+    props.history.push(`/cart/${productId}?qty=${qty}`)
+  }
+
   useEffect(() => {
     dispatch(detailsProduct(productId))
   }, [dispatch, productId]);
@@ -65,7 +69,7 @@ const ProductScreen = (props) => {
                       <button className="quantity-plus" onClick={() => setQty(qty+1)}>+</button>
                     </div>
                   </div>
-                  <button className="btn-cart"><i className="fa fa-shopping-cart"></i>Add To Cart</button>
+                  {product.countInStock > 0 ? <button className="btn-cart" onClick={addToCartHandler}><i className="fa fa-shopping-cart"></i>Add To Cart</button> : <button className="btn-cart desabled" disabled={true}><i className="fa fa-shopping-cart"></i>Add to Cart</button>}
                 </div>
             </div>
           </div>
